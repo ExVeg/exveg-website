@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExVeg™ | Agri Trading & Export</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f8f4;
+color:#222;
+}
+
+header{
+background:#0f3d1f;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+color:#4CAF50;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#4CAF50;
+}
+
+.lang-btn{
+background:#4CAF50;
+color:white;
+border:none;
+padding:6px 12px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.hero{
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1523741543316-beb7fc7023d8') center/cover no-repeat;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h2{
+font-size:38px;
+}
+
+.section{
+padding:60px 8%;
+text-align:center;
+}
+
+.section h3{
+color:#0f3d1f;
+margin-bottom:20px;
+}
+
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+width:240px;
+border-radius:8px;
+box-shadow:0 5px 12px rgba(0,0,0,0.08);
+}
+
+.contact-form{
+max-width:500px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.btn{
+background:#4CAF50;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+footer{
+background:#0f3d1f;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ExVeg™</h1>
+<nav>
+<a data-en="About" data-hi="हमारे बारे में">About</a>
+<a data-en="Agri Inputs" data-hi="कृषि उत्पाद">Agri Inputs</a>
+<a data-en="Fresh Produce" data-hi="ताज़ी सब्ज़ियाँ">Fresh Produce</a>
+<a data-en="Export Countries" data-hi="निर्यात देश">Export Countries</a>
+<a data-en="Contact" data-hi="संपर्क करें">Contact</a>
+</nav>
+<button class="lang-btn" onclick="toggleLanguage()">Hindi / English</button>
+</header>
+
+<section class="hero">
+<h2 data-en="Global Agri Trading & Export Partner"
+data-hi="वैश्विक कृषि व्यापार एवं निर्यात साझेदार">
+Global Agri Trading & Export Partner
+</h2>
+<p data-en="Connecting Farmers to India & International Markets"
+data-hi="किसानों को भारत और अंतरराष्ट्रीय बाज़ार से जोड़ना">
+Connecting Farmers to India & International Markets
+</p>
+</section>
+
+<section class="section">
+<h3 data-en="Agri Inputs Trading"
+data-hi="कृषि उत्पाद व्यापार">Agri Inputs Trading</h3>
+<div class="grid">
+<div class="card">Humic Acid</div>
+<div class="card">Organic Fertilizers</div>
+<div class="card">Bio Stimulants</div>
+<div class="card">Pesticides</div>
+<div class="card">Vegetable Seeds</div>
+</div>
+</section>
+
+<section class="section">
+<h3 data-en="Fresh Produce Supply"
+data-hi="ताज़ी सब्ज़ी आपूर्ति">Fresh Produce Supply</h3>
+<div class="grid">
+<div class="card">Green Chilli</div>
+<div class="card">Capsicum</div>
+<div class="card">Seasonal Vegetables</div>
+<div class="card">Organic Produce</div>
+</div>
+</section>
+
+<section class="section">
+<h3 data-en="Export Countries"
+data-hi="निर्यात देश">Export Countries</h3>
+<p data-en="UAE | Nepal | Bangladesh | Sri Lanka | Qatar"
+data-hi="यूएई | नेपाल | बांग्लादेश | श्रीलंका | कतर">
+UAE | Nepal | Bangladesh | Sri Lanka | Qatar
+</p>
+</section>
+
+<section class="section">
+<h3 data-en="Contact Us" data-hi="संपर्क करें">Contact Us</h3>
+<div class="contact-form">
+<form action="mailto:exvegcompany@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<textarea name="Message" rows="4" placeholder="Your Requirement"></textarea>
+<button type="submit" class="btn">Send Enquiry</button>
+</form>
+</div>
+</section>
+
+<footer>
+© 2026 ExVeg™ | Agri Trading & Export | All Rights Reserved
+</footer>
+
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+
+<script>
+let currentLang="en";
+function toggleLanguage(){
+const elements=document.querySelectorAll("[data-en]");
+elements.forEach(el=>{
+if(currentLang==="en"){
+el.textContent=el.getAttribute("data-hi");
+}else{
+el.textContent=el.getAttribute("data-en");
+}
+});
+currentLang=currentLang==="en"?"hi":"en";
+}
+</script>
+
+</body>
+</html>
